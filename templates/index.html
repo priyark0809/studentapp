@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Students List</h1>
+            <a href="{{ url_for('add_student') }}" class="button is-primary">Add Student</a>
+            <table class="table is-fullwidth is-striped mt-4">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Major</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student.id }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.email }}</td>
+                        <td>{{ student.age }}</td>
+                        <td>{{ student.major }}</td>
+                        <td>
+                            <a href="{{ url_for('update_student', id=student.id) }}" class="button is-info is-small">Edit</a>
+                            <a href="{{ url_for('delete_student', id=student.id) }}" class="button is-danger is-small" onclick="return confirm('Are you sure you want to delete this student?');">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

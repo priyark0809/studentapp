@@ -1,0 +1,111 @@
+/* General Page Styling */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header and Section Titles */
+h1.title {
+    color: #3663dc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #3293dc;
+    padding: 10px 20px;
+}
+
+.navbar a.navbar-item {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar a.navbar-item:hover {
+    background-color: #2756a7;
+    color: white;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #3273dc;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Button Styling */
+.button.is-primary {
+    background-color: #3273dc;
+    border-color: #3273dc;
+    color: white;
+}
+
+.button.is-primary:hover {
+    background-color: #2756a7;
+    border-color: #2756a7;
+    color: white;
+}
+
+.button.is-light {
+    background-color: #f4f4f9;
+    color: #3273dc;
+    border-color: #ddd;
+}
+
+.button.is-light:hover {
+    background-color: #e8e8f1;
+}
+
+/* Form Fields */
+.field .label {
+    color: #3273dc;
+    font-weight: bold;
+}
+
+.field .input, .field .select {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.field .input:focus, .field .select:focus {
+    border-color: #3273dc;
+    box-shadow: 0 0 3px rgba(50, 115, 220, 0.3);
+}
+
+/* Form Buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}

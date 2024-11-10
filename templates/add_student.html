@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+
+
+
+
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Add New Student</h1>
+            <form action="{{ url_for('create_student') }}" method="POST">
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" name="name" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="input" type="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Age</label>
+                    <div class="control">
+                        <input class="input" type="number" name="age" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Major</label>
+                    <div class="control">
+                        <input class="input" type="text" name="major" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button type="submit" class="button is-primary">Add Student</button>
+                        <a href="{{ url_for('index') }}" class="button is-light">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
